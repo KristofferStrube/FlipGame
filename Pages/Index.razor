@@ -8,7 +8,7 @@
     {
         <div class="flip-card" style=@(!card.flipped ? "transform: rotateY(180deg);" : "")>
             <div class="flip-card-inner" style=@(!card.flipped ? "transform: rotateY(180deg);" : "")>
-                <div class="flip-card-front" style="background-color: @card.color;">
+                <div class="flip-card-front" style="background-color: @(card.flipped ? card.color : "#aaa");">
                     @card.text
                 </div>
                 <div class="flip-card-back" @onclick="() => flip(card)">
